@@ -55,7 +55,9 @@ Dice.prototype.roll = function(){
 
 /*
 - player object
-- 
+- takes a player name 
+- function getScore to compare dice values and return the appropriate value
+- this.score to return the value of both dice after comparison
 */
 class Player {
 
