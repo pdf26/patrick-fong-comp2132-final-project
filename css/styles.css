@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* ------ Fonts ------ */
+@import url("fonts.css");
+@import url('http://fonts.googleapis.com/css?family=Montserrat');
+/* ------ Browser Resets ------ */
+@import url("normalize.css");
+
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+header {
+    margin: 0 auto;
+    background-color: #6693aa;
+    border: solid 4px #6693aa;
+}
+
+body {
+    padding: 5px;
+    margin: 0px;
+    background-color: rgb(248, 245, 245);
+}
+
+.wrapper {
+    font-family: "Montserrat", "garamond", Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+	/* text-align: center; */
+}
