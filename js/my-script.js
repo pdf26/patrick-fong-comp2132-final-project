@@ -30,7 +30,7 @@ let userScore = 0;
 let computerTotal = 0;
 let userTotal = 0;
 let winner = '';
-
+let srcDefault = `images/dice-1.png`;
 /*
 - dice object
 - array to hold dice values
@@ -113,6 +113,35 @@ function displayWinner(count){
     }
 }
 
+//reset all values to default values
+function resetGame(){
+
+    round = 0;
+    computerDiceValue1 = 0;
+    computerDiceValue2 = 0;
+    userDiceValue1 = 0;
+    userDiceValue2 = 0;
+    computerScore = 0;
+    userScore = 0;
+    computerTotal = 0;
+    userTotal = 0;
+    winner = '';
+
+    $round.html(`Round: ${round}`);
+    $computerScore.html(`The current score this round: ${computerScore}`);
+    $userScore.html(`The current score this round: ${userScore}`);
+    $computerTotalScore.html(`Total Score: ${computerTotal}`);
+    $userTotalScore.html(`User Score: ${userTotal}`);
+    $winner.html(`Winner: ${winner}`);
+    popup.style.display = "none";
+    clearTimeout(myPopUpTimeOut);
+
+    $(`#computerDiceImage1`).attr('src', `${srcDefault}`);
+    $(`#computerDiceImage2`).attr('src', `${srcDefault}`);
+    $(`#userDiceImage1`).attr('src', `${srcDefault}`);
+    $(`#userDiceImage2`).attr('src', `${srcDefault}`);
+}
+
 //Instantiate Dice Objects
 let computerDice1 = new Dice();
 let computerDice2 = new Dice();
@@ -162,8 +191,18 @@ $('#rollBtn').on('click', function () {
         userTotal += userScore;
 
         $computerTotalScore.html(`Total Score: ${computerTotal}`);
-        $userTotalScore.html(`User Score: ${userTotal}`);
+        $userTotalScore.html(`Total Score: ${userTotal}`);
     }
 
     displayWinner(round);
+});
+
+/*
+- event listener for click event for reset button
+- when reset button is clicked:
+  - resetGame function will set all values back to the default values
+*/
+$('#resetBtn').on('click', function () {
+
+    resetGame();
 });
