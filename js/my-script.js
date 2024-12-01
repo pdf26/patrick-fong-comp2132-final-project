@@ -131,7 +131,7 @@ function resetGame(){
     $computerScore.html(`The current score this round: ${computerScore}`);
     $userScore.html(`The current score this round: ${userScore}`);
     $computerTotalScore.html(`Total Score: ${computerTotal}`);
-    $userTotalScore.html(`User Score: ${userTotal}`);
+    $userTotalScore.html(`Total Score: ${userTotal}`);
     $winner.html(`Winner: ${winner}`);
     popup.style.display = "none";
     clearTimeout(myPopUpTimeOut);
