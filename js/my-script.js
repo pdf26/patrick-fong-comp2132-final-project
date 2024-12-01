@@ -123,6 +123,17 @@ let userDice2 = new Dice();
 let computerPlayer = new Player('Computer');
 let userPlayer = new Player('User');
 
+/*
+- event listener for click event for roll button 
+- check if number of rounds is 3
+- if number of rounds is less than 3
+  - update round
+  - roll for random dice values
+  - get and display score for round 
+  - update dice images
+  - calculate and display the the total score 
+- if number of rounds is 3 displayWinner function will display the winner of the dice game
+*/
 $('#rollBtn').on('click', function () {
 
     if(round < maxRounds){
