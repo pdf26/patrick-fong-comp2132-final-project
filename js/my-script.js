@@ -9,14 +9,6 @@ const $popupWinner = $(`#popupWinner`);
 const $btnRoll = $('#rollBtn');
 const $btnReset = $('#resetBtn');
 
-//popup
-const popup = document.getElementById('pop-up'); 
-const closeButton  = document.getElementById("close-pop-up");
-
-closeButton.addEventListener('click', function (){
-    popup.style.display = "none";
-});
-
 //variables
 const max = 6;
 const maxRounds = 3;
