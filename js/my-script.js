@@ -30,11 +30,7 @@ let userScore = 0;
 let computerTotal = 0;
 let userTotal = 0;
 let winner = '';
-<<<<<<< HEAD
 let srcDefault = `images/dice-1.png`;
-=======
-
->>>>>>> parent of d5933e0 (Revert "Merge branch 'Develop'")
 /*
 - dice object
 - array to hold dice values
@@ -117,7 +113,6 @@ function displayWinner(count){
     }
 }
 
-<<<<<<< HEAD
 //reset all values to default values
 function resetGame(){
 
@@ -147,8 +142,6 @@ function resetGame(){
     $(`#userDiceImage2`).attr('src', `${srcDefault}`);
 }
 
-=======
->>>>>>> parent of d5933e0 (Revert "Merge branch 'Develop'")
 //Instantiate Dice Objects
 let computerDice1 = new Dice();
 let computerDice2 = new Dice();
@@ -159,7 +152,6 @@ let userDice2 = new Dice();
 let computerPlayer = new Player('Computer');
 let userPlayer = new Player('User');
 
-<<<<<<< HEAD
 /*
 - event listener for click event for roll button 
 - check if number of rounds is 3
@@ -171,8 +163,6 @@ let userPlayer = new Player('User');
   - calculate and display the the total score 
 - if number of rounds is 3 displayWinner function will display the winner of the dice game
 */
-=======
->>>>>>> parent of d5933e0 (Revert "Merge branch 'Develop'")
 $('#rollBtn').on('click', function () {
 
     if(round < maxRounds){
@@ -201,16 +191,11 @@ $('#rollBtn').on('click', function () {
         userTotal += userScore;
 
         $computerTotalScore.html(`Total Score: ${computerTotal}`);
-<<<<<<< HEAD
         $userTotalScore.html(`Total Score: ${userTotal}`);
-=======
-        $userTotalScore.html(`User Score: ${userTotal}`);
->>>>>>> parent of d5933e0 (Revert "Merge branch 'Develop'")
     }
 
     displayWinner(round);
 });
-<<<<<<< HEAD
 
 /*
 - event listener for click event for reset button
@@ -221,5 +206,3 @@ $('#resetBtn').on('click', function () {
 
     resetGame();
 });
-=======
->>>>>>> parent of d5933e0 (Revert "Merge branch 'Develop'")
